@@ -1,16 +1,60 @@
-# React + Vite
+# SersifTube Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend UI for SersifTube YouTube downloader. Built with React, Vite, and TailwindCSS.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## React Compiler
+2. **Configure environment:**
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` and set:
+   - `VITE_API_URL`: Backend server URL (e.g., `http://localhost:5000`)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
+Frontend runs on `http://localhost:3000`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Deployment (Vercel)
+
+This frontend is ready for deployment on **Vercel**.
+
+### Steps:
+
+1. **Push to GitHub:**
+   - Ensure this `client` folder is in a GitHub repository.
+
+2. **Deploy on Vercel:**
+   - Go to [Vercel.com](https://vercel.com)
+   - Click "Add New Project" → "Import from GitHub"
+   - Select your frontend repository
+
+3. **Configure Settings:**
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+
+4. **Configure Environment Variables:**
+   Add this variable in Vercel:
+   - `VITE_API_URL`: Your deployed backend URL (e.g., `https://your-api.up.railway.app`)
+
+5. **Deploy!**
+
+## 🛠️ Tech Stack
+
+- **Framework**: React 19 + Vite
+- **Styling**: TailwindCSS
+- **Real-time**: Socket.IO Client
+- **Icons**: Lucide React
+
+## 📄 License
+
+MIT
